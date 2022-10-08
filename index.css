@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;1,200&family=Roboto&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif
+}
+
+/* navbar css */
+
+nav {
+    display: grid;
+    grid-template-columns: 5em auto;
+    gap: 3em;
+    align-items: center;
+    height: 4em;
+    background-color: rgba(0, 0, 0, 0.715);
+    /* border: 2px solid red; */
+}
+
+#logo {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+}
+
+#logo img {
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+}
+
+.navbar span a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    padding: 0.2em 0.7em;
+    margin-left: 1.5em;
+    border-radius: 1em;
+}
+
+.navbar span :hover {
+    border: 2px solid white;
+    color: black;
+    background-color: white;
+}
+
+/* home section css */
+
+.home-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.home-container ::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: url(img/home-section-background.jpg );
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    z-index: -1;
+}
+
+.home-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    position: relative;
+    padding: 5em 4em;
+    font-size: 1.2em;
+    color: white;
+    font-weight: 700;
+}
+
+.home-section p {
+    width: 80%;
+    text-align: center;
+    margin: 2em 2em 1em 2em;
+    /* padding: 2em; */
+}
+
+.home-section .btn,
+.contact-section .btn {
+    border: 2px solid white;
+    border-radius: 1em;
+    padding: 0.5em 2em;
+    color: white;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.363);
+}
+
+/* sevices section */
+
+.service-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 2em;
+}
+
+.services-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3em;
+    padding: 1.5em 0.5em 1.5em 0.5em;
+}
+
+.services-section div {
+    border: 3px solid red;
+    background-color: rgba(177, 153, 153, 0.329);
+    border-radius: 1em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#services-1 img,
+#services-2 img,
+#services-3 img {
+    margin-bottom: 1em;
+    width: 150px;
+    height: 150px;
+}
+
+/* clients section css */
+
+.clients-container {
+    border: 2px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.clients-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: url(img/client-background.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.clients-container h1 {
+    font-size: 2.5em;
+    margin: 0.7em;
+    font-weight: 700;
+    position: relative;
+}
+
+.client-section {
+    position: relative;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.client-section img {
+    width: 100px;
+    padding: 1.5em;
+}
+
+/* contact section */
+
+.contact-container {
+    border: 2px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.contact-container h1 {
+    font-size: 2.5em;
+    margin: 0.5em;
+    font-weight: 700;
+    position: relative;
+}
+
+.contact-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: url(img/contact-us.jpg );
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.contact-section form {
+    position: relative;
+    background-color: rgba(211, 211, 211, 0.518);
+    border: 2px solid lightgray;
+    border-radius: 1em;
+    font-size: 1.5em;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    width: 500px;
+}
+
+.contact-section input {
+    font-size: 0.8em;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    padding: 0em 0.5em;
+}
+
+.contact-section .btn {
+    background-color: rgba(255, 0, 0, 0.596);
+}
+
+/* media query */
+
+@media (max-width:759px) {
+    .services-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-section div {
+        width: 300px;
+    }
+
+    .client-section img {
+        padding: 0.5em;
+        width: 80px;
+    }
+}
+
+@media (max-width:642px) {
+    nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0em;
+        align-items: center;
+        height: 7em;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .navbar span a {
+        margin: 0em;
+    }
+
+    .home-section {
+        font-size: 1em;
+    }
+
+    .contact-section form {
+        width: 400px;
+    }
+}
+
+@media (max-width:529px) {
+    .home-section {
+        font-size: 0.8em;
+    }
+
+    .contact-section form {
+        width: 300px;
+    }
+
+    .client-section img {
+        padding: 0.1em;
+        width: 60px;
+    }
+}
+
+@media (max-width:425px) {
+    .client-section img {
+        padding: 0.2em;
+        width: 60px;
+    }
+
+    .navbar span a {
+        font-size: 0.9em;
+    }
+
+    .home-section {
+        font-size: 0.6em;
+    }
+}
+
+@media (max-width:388px) {
+    .services-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-section div {
+        width: 250px;
+    }
+
+    .contact-section form {
+        width: 250px;
+    }
+
+    #services-1 img,
+    #services-2 img,
+    #services-3 img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width:350px) {
+    .services-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-section div {
+        width: 200px;
+    }
+
+    .contact-section form {
+        width: 200px;
+    }
+
+    .client-section img {
+        padding: 0.1em;
+        width: 45px;
+    }
+}
